@@ -1,0 +1,29 @@
+.l-container {
+  width: calc(100vw - $container-padding-mobile * 2);
+  margin-right: auto;
+  margin-left: auto;
+  @include mq($from: tablet) {
+    width: calc(100vw - $container-padding-tablet * 2);
+  }
+  @include mq($from: desktop) {
+    width: calc(100vw - $container-padding-desktop * 2);
+  }
+
+  &.-solid-large {
+    max-width: $container-width;
+  }
+
+  &.-solid-small {
+    max-width: $container-width-small;
+  }
+
+  &.-solid-x-small {
+    max-width: $container-width-x-small;
+  }
+
+  &.-solid-xx-small {
+    @include mq($from: desktop) {
+      max-width: $container-width-xx-small;
+    }
+  }
+}

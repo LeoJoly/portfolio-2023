@@ -8,6 +8,17 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
-    "nuxt": "3.0.0"
+    "@typescript-eslint/eslint-plugin": "^5.44.0",
+    "@typescript-eslint/parser": "^5.44.0",
+    "@vue/eslint-config-standard": "^8.0.1",
+    "eslint": "^8.28.0",
+    "eslint-plugin-nuxt": "^4.0.0",
+    "eslint-plugin-vue": "^9.8.0",
+    "nuxt": "3.0.0",
+    "sass": "^1.56.1",
+    "typescript": "^4.9.3"
+  },
+  "dependencies": {
+    "@nuxtjs/i18n": "^8.0.0-beta.3"
   }
 }
