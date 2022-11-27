@@ -6,13 +6,7 @@
   ],
   "hero": {
     "title": "Hello!",
-    "subtitle": "I'm a web developer",
-    "pictos": [
-      "BoomPicto",
-      "CometPicto",
-      "RocketPicto",
-      "LjLogo"
-    ]
+    "subtitle": "I'm a web developer"
   },
   "about": {
     "title": "About",
