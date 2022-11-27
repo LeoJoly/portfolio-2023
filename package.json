@@ -15,10 +15,8 @@
     "eslint-plugin-nuxt": "^4.0.0",
     "eslint-plugin-vue": "^9.8.0",
     "nuxt": "3.0.0",
+    "nuxt-svgo": "^1.1.0",
     "sass": "^1.56.1",
     "typescript": "^4.9.3"
-  },
-  "dependencies": {
-    "@nuxtjs/i18n": "^8.0.0-beta.3"
   }
 }

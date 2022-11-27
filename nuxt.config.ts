@@ -18,24 +18,8 @@ export default defineNuxtConfig({
     '@/styles/main.scss'
   ],
 
-  i18n: {
-    baseUrl: env.NUXT_PUBLIC_URL,
-    defaultLocale: 'en',
-    langDir: 'content',
-    lazy: true,
-    locales: [
-      { code: 'en', iso: 'en-us', file: 'en-US.json' }
-    ],
-    vueI18n: {
-      fallbackLocale: 'en',
-      legacy: false,
-      locale: 'en'
-    }
-  },
-
   modules: [
-    '@nuxtjs/i18n'
-    // 'nuxt-svgo'
+    'nuxt-svgo'
   ],
 
   vite: {
