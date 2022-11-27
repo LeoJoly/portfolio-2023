@@ -5,7 +5,7 @@ import RocketPicto from '@/assets/images/rocket.svg'
 import LjLogo from '@/assets/logos/LJ-logo-empty.svg'
 import { hero } from '@/content/en-US.json'
 
-const pictos = ref([BoomPicto, CometPicto, RocketPicto, LjLogo])
+const pictos = shallowRef([BoomPicto, CometPicto, RocketPicto, LjLogo])
 </script>
 
 <template>
@@ -73,7 +73,7 @@ const pictos = ref([BoomPicto, CometPicto, RocketPicto, LjLogo])
   &__picto {
     position: absolute;
 
-    &::v-deep path {
+    &:deep(path) {
       fill: $white;
     }
 
