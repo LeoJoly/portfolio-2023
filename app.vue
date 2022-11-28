@@ -1,8 +1,13 @@
+<script setup lang="ts">
+import wording from '@/content/en-US.json'
+</script>
+
 <template>
   <div id="app">
     <div class="l-line -left" />
     <LayoutHeader />
     <SectionHero />
+    <UiMarqueeSlider :content="wording.about.title" :repetitions="18" />
     <div class="l-line -right" />
   </div>
 </template>
