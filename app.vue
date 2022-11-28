@@ -8,6 +8,7 @@ import wording from '@/content/en-US.json'
     <LayoutHeader />
     <SectionHero />
     <UiMarqueeSlider :content="wording.about.title" :repetitions="18" />
+    <SectionAbout />
     <div class="l-line -right" />
   </div>
 </template>

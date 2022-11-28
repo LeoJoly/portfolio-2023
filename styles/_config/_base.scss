@@ -79,3 +79,10 @@
     box-sizing: border-box;
   }
 }
+
+.l-strong {
+  color: $color;
+  font-weight: 700;
+  font-style: italic;
+  text-transform: uppercase;
+}
