@@ -21,13 +21,13 @@
         "title": "IFRI maps",
         "stack": "Nuxt.js • Strapi • Mapbox",
         "url": "https://ifrimaps.org/",
-        "cover": "ifrimaps.png"
+        "cover": "ifrimaps"
       },
       {
         "title": "Data Fight Club",
         "stack": "SvelteKit",
         "url": "https://datafight.club/",
-        "cover": "datafight.png"
+        "cover": "datafight"
       }
     ]
   },

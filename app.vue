@@ -9,6 +9,8 @@ import wording from '@/content/en-US.json'
     <SectionHero />
     <UiMarqueeSlider :content="wording.about.title" :repetitions="18" />
     <SectionAbout />
+    <UiMarqueeSlider :content="wording.projects.title" :repetitions="13" />
+    <SectionProjects />
     <div class="l-line -right" />
   </div>
 </template>
