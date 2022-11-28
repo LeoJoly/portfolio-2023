@@ -31,7 +31,7 @@ watchEffect(async () => (cover.value = await getImage(props.content.cover)))
         {{ content.title }}
       </h3>
       <p class="c-card__stack">
-        Technologies: {{ content.stack }}
+        Stack: {{ content.stack }}
       </p>
     </div>
   </a>

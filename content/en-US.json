@@ -37,13 +37,13 @@
       },
       {
         "title": "Digital Diplomacy Index",
-        "stack": "SvelteKit",
+        "stack": "Nuxt.js",
         "url": "https://digital-diplomacy-index.com",
         "cover": "ddi"
       },
       {
         "title": "Comptoir du Marché",
-        "stack": "Nuxt • Prismic",
+        "stack": "Nuxt.js • Prismic",
         "url": "https://comptoirdumarche.fr",
         "cover": "comptoir"
       }
