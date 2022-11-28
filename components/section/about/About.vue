@@ -16,14 +16,8 @@ import { about } from '@/content/en-US.json'
 
 <style lang="scss" scoped>
 .c-about {
+  @include margins();
   overflow-x: hidden;
-  padding: 8rem 0;
-  @include mq($from: tablet) {
-    padding: 10rem 0;
-  }
-  @include mq($from: desktop) {
-    padding: 13rem 0;
-  }
 
   &__container {
     margin-bottom: 8rem;

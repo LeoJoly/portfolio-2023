@@ -24,20 +24,31 @@ import { contact } from '@/content/en-US.json'
 
 <style lang="scss" scoped>
 .c-contact {
-  $space: 13rem;
-  padding: $space 0;
+  @include margins();
 
   &__title {
-    @include font-body-text-alt($font-size: 8rem, $line-height: 9.7rem);
+    @include font-body-text-alt($font-size: 5rem, $line-height: 6rem);
     color: $color;
     text-transform: uppercase;
     margin-bottom: 2rem;
+    @include mq($from: desktop) {
+      @include font-body-text-alt($font-size: 8rem, $line-height: 9.7rem);
+    }
   }
 
   &__description {
-    font-size: 4rem;
-    line-height: 5.3rem;
+    font-size: 2.5rem;
+    line-height: 3.5rem;
     margin-bottom: 5rem;
+    @include mq($from: tablet) {
+      font-size: 3rem;
+      line-height: 4.5rem;
+    }
+    @include mq($from: desktop) {
+      font-size: 4rem;
+      line-height: 6rem;
+    }
+    
   }
 
   &__links {

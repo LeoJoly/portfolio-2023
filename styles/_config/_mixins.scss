@@ -46,3 +46,13 @@
 
   scrollbar-color: $foreground-color $background-color;
 }
+
+@mixin margins() {
+  padding: $margin-mobile 0;
+  @include mq($from: tablet) {
+    padding: $margin-tablet 0;
+  }
+  @include mq($from: desktop) {
+    padding: $margin-desktop 0;
+  }
+}
