@@ -11,6 +11,8 @@ import wording from '@/content/en-US.json'
     <SectionAbout />
     <UiMarqueeSlider :content="wording.projects.title" :repetitions="13" />
     <SectionProjects />
+    <UiMarqueeSlider :content="wording.contact.title" :repetitions="17" />
+    <SectionContact />
     <div class="l-line -right" />
   </div>
 </template>
