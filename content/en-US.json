@@ -18,16 +18,34 @@
     "ref": "projects",
     "list": [
       {
+        "title": "Viparis",
+        "stack": "Nuxt.js • Strapi",
+        "url": "https://viparis.com",
+        "cover": "viparis"
+      },
+      {
         "title": "IFRI maps",
         "stack": "Nuxt.js • Strapi • Mapbox",
-        "url": "https://ifrimaps.org/",
-        "cover": "ifrimaps"
+        "url": "https://ifrimaps.org",
+        "cover": "ifri"
       },
       {
         "title": "Data Fight Club",
         "stack": "SvelteKit",
-        "url": "https://datafight.club/",
-        "cover": "datafight"
+        "url": "https://datafight.club",
+        "cover": "datafightclub"
+      },
+      {
+        "title": "Digital Diplomacy Index",
+        "stack": "SvelteKit",
+        "url": "https://digital-diplomacy-index.com",
+        "cover": "ddi"
+      },
+      {
+        "title": "Comptoir du Marché",
+        "stack": "Nuxt • Prismic",
+        "url": "https://comptoirdumarche.fr",
+        "cover": "comptoir"
       }
     ]
   },
