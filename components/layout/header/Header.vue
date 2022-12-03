@@ -1,12 +1,14 @@
 <script setup lang="ts">
 import LjLogo from '@/assets/logos/LJ-logo-plain.svg'
+interface Props { angle: number }
+defineProps<Props>()
 defineEmits(['navigate'])
 </script>
 
 <template>
   <header class="c-header">
     <div class="c-header__container | l-container">
-      <LjLogo class="c-header__logo" />
+      <LjLogo class="c-header__logo" :style="`transform: rotate(${angle}deg)`" />
       <LayoutNav @navigate="(ref) => $emit('navigate', ref)" />
       <LayoutBurger @navigate="(ref) => $emit('navigate', ref)" />
     </div>

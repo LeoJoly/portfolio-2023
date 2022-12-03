@@ -1,7 +1,15 @@
 <script setup lang="ts">
 import wording from '@/content/en-US.json'
 import { scrollTo } from '@/scripts/utils/scrollTo'
+import { rotate } from '@/scripts/utils/rotate'
 
+/** State */
+const angle = ref(0)
+const animation = ref<null | GSAPTimeline>(null)
+
+//** Template refs */
+const start = ref(null)
+const end = ref(null)
 const about = ref(null)
 const projects = ref(null)
 const contact = ref(null)
@@ -11,12 +19,25 @@ const onNavigate = (ref: 'about' | 'projects' | 'contact') => {
 
   scrollTo(sections[ref].value, window.innerWidth < 768 ? 70 : 90)
 }
+
+onMounted(() => {
+  if (!animation.value) {
+    animation.value = rotate(start.value, end.value, angle)
+  }
+})
+
+onUnmounted(() => {
+  if (animation.value) {
+    animation.value.kill()
+  }
+})
 </script>
 
 <template>
   <div id="app">
+    <span ref="start" />
     <div class="l-line -left" />
-    <LayoutHeader @navigate="onNavigate" />
+    <LayoutHeader :angle="angle" @navigate="onNavigate" />
     <SectionHero />
     <div ref="about" />
     <UiMarqueeSlider :content="wording.about.title" :repetitions="18" />
@@ -28,6 +49,7 @@ const onNavigate = (ref: 'about' | 'projects' | 'contact') => {
     <UiMarqueeSlider :content="wording.contact.title" :repetitions="17" />
     <SectionContact />
     <div class="l-line -right" />
+    <span ref="end" />
   </div>
 </template>
 
