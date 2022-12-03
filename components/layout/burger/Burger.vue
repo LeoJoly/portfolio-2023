@@ -1,10 +1,16 @@
 <script setup lang="ts">
 import { nav } from '@/content/en-US.json'
 
+const emit = defineEmits(['navigate'])
 const showBurger = ref(false)
 
 const toogleBurger = () => {
   showBurger.value = !showBurger.value
+}
+
+const onClick = (ref: string) => {
+  emit('navigate', ref)
+  toogleBurger()
 }
 </script>
 
@@ -17,7 +23,7 @@ const toogleBurger = () => {
     <div class="c-burger__container">
       <nav>
         <ul class="c-burger__nav">
-          <li v-for="item in nav" :key="item.ref" class="c-burger__link">
+          <li v-for="item in nav" :key="item.ref" class="c-burger__link" @click="onClick(item.ref)">
             {{ item.label }}
           </li>
         </ul>

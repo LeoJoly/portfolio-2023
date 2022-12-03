@@ -1,13 +1,14 @@
 <script setup lang="ts">
 import LjLogo from '@/assets/logos/LJ-logo-plain.svg'
+defineEmits(['navigate'])
 </script>
 
 <template>
   <header class="c-header">
     <div class="c-header__container | l-container">
       <LjLogo class="c-header__logo" />
-      <LayoutNav />
-      <LayoutBurger />
+      <LayoutNav @navigate="(ref) => $emit('navigate', ref)" />
+      <LayoutBurger @navigate="(ref) => $emit('navigate', ref)" />
     </div>
   </header>
 </template>
