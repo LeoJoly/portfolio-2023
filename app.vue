@@ -36,6 +36,7 @@ onUnmounted(() => {
 <template>
   <div id="app">
     <span ref="start" />
+    <UiMouse />
     <div class="l-line -left" />
     <LayoutHeader :angle="angle" @navigate="onNavigate" />
     <SectionHero />

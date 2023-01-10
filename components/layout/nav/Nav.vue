@@ -1,12 +1,22 @@
 <script setup lang="ts">
 import { nav } from '@/content/en-US.json'
 defineEmits(['navigate'])
+
+/** Methods */
+const { onMouseEnter, onMouseLeave } = useMouse()
 </script>
 
 <template>
   <nav>
     <ul class="c-nav">
-      <li v-for="item in nav" :key="item.ref" class="c-nav__item" @click="$emit('navigate', item.ref)">
+      <li
+        v-for="item in nav"
+        :key="item.ref"
+        class="c-nav__item"
+        @click="$emit('navigate', item.ref)"
+        @mouseenter="onMouseEnter"
+        @mouseleave="onMouseLeave"
+      >
         <span class="c-nav__main">{{ item.label }}</span>
         <span class="c-nav__hover">{{ item.label }}</span>
       </li>

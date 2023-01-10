@@ -14,16 +14,26 @@ const props = defineProps<Props>()
 const cover = ref()
 
 /** Methods */
+const { onMouseEnter, onMouseLeave } = useMouse()
 const getImage = async (image: string) => {
   const module = await import(/* @vite-ignore */ `../../../../assets/images/${ image }.png`)
   return module.default.replace(/^\/@fs/, '')
 }
 
 watchEffect(async () => (cover.value = await getImage(props.content.cover)))
+
+
 </script>
 
 <template>
-  <a class="c-card" :href="content.url" target="_blank" rel="noreferrer">
+  <a
+    class="c-card"
+    :href="content.url"
+    target="_blank"
+    rel="noreferrer"
+    @mouseenter="onMouseEnter"
+    @mouseleave="onMouseLeave"
+  >
     <div class="c-card__cover" :style="`background-image: url(${cover});`" />
     <div class="c-card__overlay" />
     <div class="c-card__content">

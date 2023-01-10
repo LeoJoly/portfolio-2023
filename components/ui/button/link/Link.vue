@@ -6,11 +6,18 @@ interface Content {
 }
 interface Props { content: Content }
 defineProps<Props>()
+
+/** Methods */
+const { onMouseEnter, onMouseLeave } = useMouse()
 </script>
 
 <template>
-  <div class="c-link">
-    <a class="c-link__wrapper" :href="content.url" target="_blank" rel="noreferrer">
+  <div
+    class="c-link"
+    @mouseenter="onMouseEnter"
+    @mouseleave="onMouseLeave"
+  >
+    <a class="c-link__wrapper" :href="content.url.replace('[at]', '@')" target="_blank" rel="noreferrer">
       <span class="c-link__main">{{ content.label }}</span>
       <span class="c-link__hover">{{ content.label }}</span>
     </a>
