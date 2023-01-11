@@ -1,0 +1,22 @@
+/* # Font Mixins */
+@mixin font-body-text($font: $font-primary, $font-size: 1.6rem, $weight : 400, $style: normal, $line-height : 2.4rem) {
+  font: {
+    family: $font;
+    style: $style;
+    size: $font-size;
+    weight: $weight;
+  }
+  line-height: $line-height;
+}
+
+@mixin font-body-text-alt($font: $font-primary, $font-size: 1.6rem, $weight : 700, $style: italic, $line-height : 2.4rem) {
+  font: {
+    family: $font;
+    style: $style;
+    size: $font-size;
+    weight: $weight;
+
+  }
+  line-height: $line-height;
+  text-transform: uppercase;
+}

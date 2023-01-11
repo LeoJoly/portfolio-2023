@@ -1,0 +1,58 @@
+/**** Keyframes Animation ****/
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} {
+    @content;
+  }
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+  @-ms-keyframes #{$name} {
+    @content;
+  }
+  @keyframes #{$name} {
+    @content;
+  }
+}
+
+/* # block stretching */
+@mixin stretch($position: absolute, $length: 0) {
+  position: $position;
+  left: $length;
+  top: $length;
+  bottom: $length;
+  right: $length;
+}
+
+/* Flex */
+@mixin flex($align: center, $justify: center, $flow: row) {
+  display: flex;
+  flex-flow: $flow;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+/* Styling scrollbar */
+@mixin scrollbars($size, $foreground-color, $background-color) {
+  &::-webkit-scrollbar {
+    width: $size;
+    height: $size;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: $foreground-color;
+  }
+  &::-webkit-scrollbar-track {
+    background: $background-color;
+  }
+
+  scrollbar-color: $foreground-color $background-color;
+}
+
+@mixin margins() {
+  padding: $margin-mobile 0;
+  @include mq($from: tablet) {
+    padding: $margin-tablet 0;
+  }
+  @include mq($from: desktop) {
+    padding: $margin-desktop 0;
+  }
+}

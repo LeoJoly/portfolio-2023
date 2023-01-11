@@ -1,0 +1,92 @@
+@at-root {
+
+  * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    @include mq($from: desktop) {
+      cursor: none;
+    }
+  }
+
+  html {
+    font-size: 62.5%;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    @include font-body-text();
+    color: $white;
+    position: relative;
+    background-color: $black;
+
+  }
+
+  *, *::before, *::after {
+    background-repeat: no-repeat;
+  }
+
+  a, a:focus, a:active, a::-moz-focus-inner {
+    outline: none;
+    border-color: transparent;
+  }
+
+  h1, h2, h3, h4 {
+    margin: 0;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  svg, img {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    list-style: none
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+
+    &:hover {
+      text-decoration: none;
+    }
+
+    &:focus{
+      outline: 0
+    }
+  }
+
+  blockquote {
+    padding: 0;
+    margin: 0;
+  }
+
+  button:focus,
+  input:focus {
+    outline: 0;
+  }
+
+  button {
+    background: none;
+    border: none;
+    padding: 0;
+    box-sizing: border-box;
+  }
+}
+
+.l-strong {
+  color: $color;
+  font-weight: 700;
+  font-style: italic;
+  text-transform: uppercase;
+}

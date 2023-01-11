@@ -1,0 +1,72 @@
+{
+  "nav": [
+    { "label": "About", "title": "About", "ref": "about" },
+    { "label": "Projects", "title": "Selected work", "ref": "projects" },
+    { "label": "Contact", "title": "Contact", "ref": "contact" }
+  ],
+  "hero": {
+    "title": "Hello!",
+    "subtitle": "I'm a web developer"
+  },
+  "about": {
+    "title": "About",
+    "ref": "about",
+    "description": "Hey! I'm Leo, <strong class=\"l-strong\">fullstack developer</strong> based between Paris and the Swiss Alps. With my past as Communication Manager, I have a serious passion for <strong class=\"l-strong\">design and creation</strong>. Now I focus on writing simple and functional code to create <strong class=\"l-strong\">intuitive and dynamic user experiences</strong>."
+  },
+  "projects": {
+    "title": "Selected work",
+    "ref": "projects",
+    "list": [
+      {
+        "title": "Viparis",
+        "stack": "Nuxt.js • Strapi",
+        "url": "https://viparis.com",
+        "cover": "viparis"
+      },
+      {
+        "title": "IFRI maps",
+        "stack": "Nuxt.js • Strapi • Mapbox",
+        "url": "https://ifrimaps.org",
+        "cover": "ifri"
+      },
+      {
+        "title": "Data Fight Club",
+        "stack": "SvelteKit",
+        "url": "https://datafight.club",
+        "cover": "datafightclub"
+      },
+      {
+        "title": "Digital Diplomacy Index",
+        "stack": "Nuxt.js",
+        "url": "https://digital-diplomacy-index.com",
+        "cover": "ddi"
+      },
+      {
+        "title": "Comptoir du Marché",
+        "stack": "Nuxt.js • Prismic",
+        "url": "https://comptoirdumarche.fr",
+        "cover": "comptoir"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contact",
+    "ref": "contact",
+    "subtitle": "Let's get in touch!",
+    "description": "If you'd like to get more details on my work, discuss about a project, or simply chat about mountains and snowboarding, don't hesitate to shoot me an email.",
+    "links": [
+      {
+        "label": "GitHub",
+        "url": "https://github.com/LeoJoly"
+      },
+      {
+        "label": "Linkedin",
+        "url": "https://www.linkedin.com/in/leojoly/"
+      },
+      {
+        "label": "Email",
+        "url": "mailto:joly.leo[at]gmail.com"
+      }
+    ]
+  }
+}

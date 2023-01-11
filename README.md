@@ -1,42 +1,37 @@
-# Nuxt 3 Minimal Starter
+# Portfolio-2023
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+This is a project to show my projects 🚀
 
-## Setup
+## Build Setup
 
-Make sure to install the dependencies:
+The usual process for Nuxt.js based apps/websites:
 
 ```bash
-# yarn
-yarn install
-
-# npm
+# install dependencies
 npm install
 
-# pnpm
-pnpm install --shamefully-hoist
-```
-
-## Development Server
-
-Start the development server on http://localhost:3000
-
-```bash
+# serve with hot reload at localhost:3000
 npm run dev
-```
 
-## Production
+# generate static project BEFORE PULL REQUEST
+npm run generate
 
-Build the application for production:
-
-```bash
+# build ssr projects BEFORE PULL REQUEST
 npm run build
-```
 
-Locally preview production build:
-
-```bash
+# try launching project BEFORE PULL REQUEST
 npm run preview
 ```
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+## Stack
+
+- [Nuxt.js](https://nuxt.com/)
+- [GSAP](https://greensock.com/gsap/)
+- [Lenis](https://github.com/studio-freight/lenis)
+- [Scss](https://sass-lang.com/)
+- [nuxt-svgo](https://github.com/cpsoinos/nuxt-svgo#readme)
+
+## Third Party
+
+- [Vercel (Hosting & Continuous Deployment)](https://vercel.com/home)
+- [GitHub](https://github.com/)

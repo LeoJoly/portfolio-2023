@@ -1,0 +1,33 @@
+// Fonts
+$font-primary: 'Poppins', sans-serif !default;
+
+// Theme colors
+$white: #fff;
+$black: #000;
+$grey: #C4C4C4;
+$grey-dark: #333333;
+$color: #87A2E7;
+
+// Easing
+$ease-short: all 250ms cubic-bezier(0.215, 0.610, 0.355, 1.000);
+$ease: all 400ms cubic-bezier(0.215, 0.610, 0.355, 1.000);
+$ease-medium: all 600ms cubic-bezier(0.215, 0.610, 0.355, 1.000);
+$ease-long: all 1000ms cubic-bezier(0.215, 0.610, 0.355, 1.000);
+
+// Shadows
+$shadow: 0px 2px 15px rgba(0, 0, 0, 0.2);
+$shadow-down: 0px 8px 35px rgba(0, 0, 0, 0.15);
+
+// Grid
+$container-width: 132rem;
+$container-width-small: 113rem;
+$container-width-x-small: 87rem;
+$container-width-xx-small: 64.5rem;
+$container-padding-desktop: 6rem;
+$container-padding-tablet: 4rem;
+$container-padding-mobile: 2rem;
+
+// Margins
+$margin-desktop: 26rem;
+$margin-tablet: 16rem;
+$margin-mobile: 10rem;
