@@ -16,13 +16,13 @@
 
 <style lang="scss" scoped>
 .c-footer {
+  padding: 2rem 0;
   border-top: solid .1rem $white;
-  @include mq($from: desktop) {
-    padding: 2rem 0;
-  }
 
   &__container {
-    @include flex($justify: space-between);
+    @include mq($from: tablet) {
+      @include flex($justify: space-between);
+    }
   }
 }
 </style>
