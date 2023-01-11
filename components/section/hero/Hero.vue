@@ -5,13 +5,48 @@ import RocketPicto from '@/assets/images/rocket.svg'
 import LjLogo from '@/assets/logos/LJ-logo-empty.svg'
 import { hero } from '@/content/en-US.json'
 
+//** State */
 const pictos = shallowRef([BoomPicto, CometPicto, RocketPicto, LjLogo])
+const isActiveMouse = ref(false)
+const boxPosition = ref({ x: 0, y: 0 })
+const timeout = ref<null | number>(null)
+
+//** Template ref */
+const container = ref<null | HTMLElement>(null)
+
+//** Methods */
+const onMouseMove = (event: MouseEvent) => {
+  if (!isActiveMouse || !container.value) return
+
+  const containerRect = container.value.getBoundingClientRect()
+  boxPosition.value = {
+    x: -(((containerRect.width / 0.8) - event.x) / (containerRect.width / 0.8) * -50),
+    y: -(((containerRect.height / 0.8) - event.y) / (containerRect.height / 0.8) * -50)
+  }
+}
+
+const debounceMouseMove = (event: MouseEvent) => {
+  if (timeout.value) window.cancelAnimationFrame(timeout.value)
+
+  timeout.value = window.requestAnimationFrame(() => {
+    onMouseMove(event)
+  })
+}
+
+const onMouseLeave = () => {
+  isActiveMouse.value = false
+  boxPosition.value = { x: 0, y: 0 }
+}
+
+const isEven = (n: number) => {
+  return n % 2 == 0
+}
 </script>
 
 <template>
-  <section class="c-hero">
+  <section ref="container" class="c-hero" @mouseenter="isActiveMouse = true" @mousemove="debounceMouseMove" @mouseleave="onMouseLeave">
     <div class="c-hero__container | l-container">
-      <div>
+      <div class="c-hero__wrapper">
         <h1 class="c-hero__title">
           {{ hero.title }}
         </h1>
@@ -19,7 +54,13 @@ const pictos = shallowRef([BoomPicto, CometPicto, RocketPicto, LjLogo])
           {{ hero.subtitle }}
         </h2>
       </div>
-      <Component :is="picto" v-for="picto in pictos" :key="picto" class="c-hero__picto" />
+      <Component
+        :is="picto"
+        v-for="(picto, i) in pictos"
+        :key="picto"
+        class="c-hero__picto"
+        :style="`transform: translate3d(${isEven(i + 1) ? boxPosition.x : -boxPosition.x}px, ${isEven(i + 1) ? -boxPosition.y : boxPosition.y}px, 0);`"
+      />
     </div>
   </section>
 </template>
@@ -72,6 +113,7 @@ const pictos = shallowRef([BoomPicto, CometPicto, RocketPicto, LjLogo])
 
   &__picto {
     position: absolute;
+    transition: $ease-medium;
 
     &:deep(path) {
       fill: $white;
