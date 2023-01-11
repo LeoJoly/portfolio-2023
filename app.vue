@@ -49,6 +49,7 @@ onUnmounted(() => {
     <div ref="contact" />
     <UiMarqueeSlider :content="wording.contact.title" :repetitions="17" />
     <SectionContact />
+    <LayoutFooter />
     <div class="l-line -right" />
     <span ref="end" />
   </div>
