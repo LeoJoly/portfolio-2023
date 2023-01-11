@@ -1,6 +1,10 @@
-# portfolio-2022
+# Portfolio-2023
+
+This is a project to show my projects 🚀
 
 ## Build Setup
+
+The usual process for Nuxt.js based apps/websites:
 
 ```bash
 # install dependencies
@@ -18,3 +22,16 @@ npm run build
 # try launching project BEFORE PULL REQUEST
 npm run preview
 ```
+
+## Stack
+
+- [Nuxt.js](https://nuxt.com/)
+- [GSAP](https://greensock.com/gsap/)
+- [Lenis](https://github.com/studio-freight/lenis)
+- [Scss](https://sass-lang.com/)
+- [nuxt-svgo](https://github.com/cpsoinos/nuxt-svgo#readme)
+
+## Third Party
+
+- [Vercel (Hosting & Continuous Deployment)](https://vercel.com/home)
+- [GitHub](https://github.com/)
