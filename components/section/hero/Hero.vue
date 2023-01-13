@@ -38,8 +38,8 @@ const onMouseLeave = () => {
   boxPosition.value = { x: 0, y: 0 }
 }
 
-const isEven = (n: number) => {
-  return n % 2 == 0
+const isInverted = (n: number) => {
+  return [1, 2].includes(n)
 }
 </script>
 
@@ -59,7 +59,7 @@ const isEven = (n: number) => {
         v-for="(picto, i) in pictos"
         :key="picto"
         class="c-hero__picto"
-        :style="`transform: translate3d(${isEven(i + 1) ? boxPosition.x : -boxPosition.x}px, ${isEven(i + 1) ? -boxPosition.y : boxPosition.y}px, 0);`"
+        :style="`transform: translate3d(${isInverted(i) ? boxPosition.x : -boxPosition.x}px, ${isInverted(i) ? -boxPosition.y : boxPosition.y}px, 0);`"
       />
     </div>
   </section>
