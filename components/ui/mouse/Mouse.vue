@@ -32,6 +32,10 @@ onBeforeUnmount(() => window.removeEventListener('mousemove', onMouseMove))
   transition: height 400ms cubic-bezier(0.215, 0.610, 0.355, 1.000),
               width 400ms cubic-bezier(0.215, 0.610, 0.355, 1.000);
 
+  @include mq($until: desktop) {
+    display: none;
+  }
+
   &.-hover {
     height: 6rem;
     width: 6rem;
